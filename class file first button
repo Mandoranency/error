@@ -1,0 +1,26 @@
+ public class NavigationHelper
+ {
+      private int rp; 
+      private Button btnupdate;
+      private Button btndelete;
+      private Button btninsert;
+     public NavigationHelper(Button btnUpdate, Button btnDelete, Button btnInsert)
+     {
+         btnupdate = btnUpdate;
+         btndelete = btnDelete;
+         btninsert = btnInsert;
+         rp = 0; 
+     }
+     public void NavigateToFirstRecord()
+     {
+         rp = 0;
+         Navigate();
+         btnupdate.Enabled = true;
+         btndelete.Enabled = true;
+         btninsert.Text = "&Insert";
+     }
+    private void Navigate()
+    {
+         Console.WriteLine("Navigating to record: " + rp);
+    }
+ }
