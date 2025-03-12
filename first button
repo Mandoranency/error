@@ -1,0 +1,14 @@
+ public partial class Form2: Form
+ {
+     private NavigationHelper navigationHelper;
+     public Form2()
+     {
+         InitializeComponent();
+         navigationHelper = new NavigationHelper(btnupdate, btndelete, btninsert);
+     }
+     private void btnfirst_Click(object sender, EventArgs e)
+     {
+          navigationHelper.NavigateToFirstRecord();
+     }
+}
+  
